@@ -32,9 +32,6 @@ def reverse_words(text):
 def char_count(text, char):
     return text.count(char)
 
-def remove_from_list(list, to_remove):
-    return [item for item in list if item != to_remove]
-
 #---- start of program
 
 print("The test text is:")
@@ -109,7 +106,7 @@ def perform_list_tasks():
     print("The 6th through 9th words in the list are:", word_list[6:10])
 
     # remove "amazing" from the list
-    word_list = remove_from_list(word_list, "amazing")
+    word_list = [item for item in word_list if item != "amazing"]
 
     # sort the word list in alphabetical order
     word_list.sort()
